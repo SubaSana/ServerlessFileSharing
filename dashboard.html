@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - File Sharing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h2>My Files</h2>
+        <button id="logout-btn" class="btn btn-secondary">Logout</button>
+    </div>
+
+    <div class="container">
+        <div class="upload-section">
+            <h3>Upload File</h3>
+            
+            <label for="file-input">Choose a file to upload</label>
+            <input type="file" id="file-input" name="file" aria-label="Choose file to upload">
+            
+            <button id="upload-btn" class="btn btn-primary" aria-label="Upload selected file">Upload</button>
+            
+            <div id="upload-progress" class="progress-bar" style="display: none;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div id="progress-fill"></div>
+            </div>
+            <p id="upload-message" role="alert"></p>
+        </div>
+
+        <div class="files-section">
+            <h3>Your Files</h3>
+            <button id="refresh-btn" class="btn btn-secondary" aria-label="Refresh file list">Refresh List</button>
+            <div id="files-list" role="region" aria-live="polite">
+                <p>Loading files...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/amazon-cognito-identity-js@6.3.6/dist/amazon-cognito-identity.min.js"></script>
+    <script src="app.js?v=999"></script>
+"></script>
+</body>
+</html>
