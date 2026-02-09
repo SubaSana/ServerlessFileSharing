@@ -4,12 +4,12 @@ A fully serverless file sharing web application built using Amazon Web Services 
 The platform allows authenticated users to upload, view, download, delete, and share files securely without managing any traditional backend servers.This project demonstrates the practical implementation of serverless architecture using managed AWS services.
     
 
-# Project Overview
+## Project Overview
 
 The Serverless File Sharing Platform is designed to provide secure, scalable, and cost-effective file storage and sharing similar to services like Google Drive or Dropbox.
 The application eliminates server management by leveraging AWS-managed services such as Lambda, S3, DynamoDB, API Gateway, and Cognito.
 
-# Key Features
+## Key Features
 
 -User authentication using Amazon Cognito
 
@@ -25,7 +25,7 @@ The application eliminates server management by leveraging AWS-managed services 
 
 -Secure storage using Amazon S3
 
-# System Architecture
+## System Architecture
 ```text
   Frontend (HTML/CSS/JS)
         ↓
@@ -41,27 +41,27 @@ Amazon DynamoDB (File Metadata)
 Authentication is handled separately using Amazon Cognito, and JWT tokens are used to authorize API requests.
 
 
-# Technology Stack
+## Technology Stack
 
-## Frontend: 
+### Frontend: 
   
   HTML5, CSS3,JavaScript
 
 Hosted as a static website (S3 / Vercel)
 
-## Backend: 
+### Backend: 
 
 AWS Lambda (Python 3.12), Amazon API Gateway (REST API)
   
-## Storage & Database: 
+### Storage & Database: 
 
 Amazon S3 – file storage, Amazon DynamoDB – file metadata storage
   
-## Authentication:  
+### Authentication:  
 
 Amazon Cognito User Pools, JWT token-based authentication
 
-## Aws Services Used
+### Aws Services Used
 
 ``` text
 | Service     | Purpose                                 |
@@ -75,7 +75,7 @@ Amazon Cognito User Pools, JWT token-based authentication
 | CloudWatch  | Logging and monitoring                  |
 ```
 
-# Lambda Functions
+### Lambda Functions
 
 The backend consists of the following AWS Lambda functions:
 
@@ -89,7 +89,7 @@ The backend consists of the following AWS Lambda functions:
 | ShareFile     | Generates shareable pre-signed URLs                 |
 ```
 
-# Project Structure
+## Project Structure
 
 ```text
 ServerlessFileSharing/
@@ -112,7 +112,7 @@ ServerlessFileSharing/
 └── README.md
 ```
 
-# How File Upload Works
+## How File Upload Works
 
 -User logs in using Amazon Cognito
 
@@ -131,7 +131,7 @@ ServerlessFileSharing/
 -Success response is returned to frontend
 
 
-# Security Considerations
+## Security Considerations
 
 -AWS credentials are not stored in the repository
 
@@ -144,7 +144,7 @@ ServerlessFileSharing/
 -IAM roles follow least-privilege access
 
 
-# Deployment Notes
+## Deployment Notes
 
 -Frontend can be hosted using Amazon S3 or Vercel
 
@@ -155,9 +155,9 @@ ServerlessFileSharing/
 -CORS must be enabled on API Gateway routes
 
 
-# Limitations & Future Enhancements
+## Limitations & Future Enhancements
 
-  ## Current Limitations
+  ### Current Limitations
 
 -No folder-based organization
 
@@ -166,7 +166,7 @@ ServerlessFileSharing/
 -No real-time file preview
 
 
-## Future Enhancements
+### Future Enhancements
 
 -Folder support
 
@@ -181,7 +181,7 @@ ServerlessFileSharing/
 -Activity logs and notifications
 
 
-# Conclusion
+## Conclusion
 
 This project demonstrates how a real-world file sharing system can be built using serverless cloud services.
 By leveraging AWS-managed services, the platform achieves scalability, security, and cost efficiency without maintaining 
